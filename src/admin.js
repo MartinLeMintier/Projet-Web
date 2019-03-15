@@ -5,7 +5,17 @@ const Admin = () => {
     return (
 
         <div>
-            <p>Admin</p>
+            <form>
+
+
+                <label>
+                    <h1>Rajouter de la donnée :</h1>
+                    <input type="text" name="name" />
+                </label>
+                <input type="submit" value="Submit" />
+
+
+            </form>
         </div>
 
     );
