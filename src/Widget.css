@@ -1,0 +1,16 @@
+
+h1
+{
+    font-family: 'Courier New', Courier, monospace;
+    color : white;
+}
+
+.Widget {
+    background-color: #34495e;
+    height: 10cm;
+    width: 10cm;
+    display: inline-block;
+    margin: 1cm;
+    margin-top: 1.1cm;
+}
+
