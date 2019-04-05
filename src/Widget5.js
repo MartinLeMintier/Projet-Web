@@ -9,14 +9,14 @@ class Widget extends Component {
     render() {
 
         const data = [
-            { text: 'Man', value: 500, color: '#f00' },
-            { text: 'Woman', value: 300 }
+            { text: ' ', value: 5, color: '#f00' },
+            
         ];
 
        
         return (
             <div className="Widget">
-                <h1>Cinquieme Widget</h1>
+                <h1> Nombre album aujourdhui</h1>
 
                 <BarChart
                     
