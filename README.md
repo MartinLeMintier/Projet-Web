@@ -1,5 +1,5 @@
 Martin Le Mintier et Quentin Aré
-La partie front est sur le github de Martin le Mintier et la partie Back sur celui de Quentin Are.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
