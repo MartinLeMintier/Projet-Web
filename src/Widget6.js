@@ -1,31 +1,39 @@
 import React, { Component } from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import axios from 'axios';
 
-// Import styling
-import '../src/Widget.css';
+import './Widget.css';
 
 class Widget extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {
+			track: null
+		}
+	}
+
+	componentDidMount() {
+		this.sync()
+	}
+	sync() {
+		axios.get("http://localhost:3000/track")
+			.then(({data}) => {console.log(data.length)
+				 this.setState({ track: data[1].Title })  
+			
+		})
+	}
+
     render() {
+		
+			return (
+				<div className="Widget">
+					<h1>La chanson du jour est : </h1>
+					<h1> { this.state.track } </h1>
+				</div>
+				)
 
-        const data = [{ name: '2016', uv: 400},{ name: '2017', uv: 200},{ name: '2018', uv: 300}, { name: '2019', uv: 100}];
-
-
-        return (
-            <div className="Widget">
-                <h1>Sixièeme Widget</h1>
-
-                <LineChart width={360} height={300} data={data}>
-                    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-                    <CartesianGrid stroke="#ccc" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                </LineChart>
-            </div>
-
-        )
     }
+
+	
 }
-
-
-
 export default Widget;
